@@ -1,0 +1,292 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+@layer base {
+  :root {
+    --background: #f8fafc;
+    /* Slate 50 */
+    --foreground: #0f172a;
+    /* Slate 900 */
+    --card: #ffffff;
+    --card-foreground: #0f172a;
+    --popover: #ffffff;
+    --popover-foreground: #0f172a;
+
+    /* Vibrant Indigo Primary */
+    --primary: #4f46e5;
+    --primary-foreground: #ffffff;
+
+    --secondary: #e2e8f0;
+    /* Slate 200 */
+    --secondary-foreground: #1e293b;
+    --muted: #f1f5f9;
+    /* Slate 100 */
+    --muted-foreground: #64748b;
+    /* Slate 500 */
+    --accent: #e0e7ff;
+    /* Indigo 100 */
+    --accent-foreground: #3730a3;
+    /* Indigo 800 */
+
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --border: #e2e8f0;
+    --input: #e2e8f0;
+    --ring: #4f46e5;
+    --radius: 0.75rem;
+  }
+
+  /* Dark mode scheme - Midnight/Cyberpunk mix */
+  .dark {
+    --background: #020617;
+    /* Slate 950 */
+    --foreground: #f8fafc;
+    --card: #0f172a;
+    /* Slate 900 */
+    --card-foreground: #f8fafc;
+    --popover: #0f172a;
+    --popover-foreground: #f8fafc;
+
+    /* Neon Violet/Indigo Primary */
+    --primary: #8b5cf6;
+    --primary-foreground: #ffffff;
+
+    --secondary: #1e293b;
+    --secondary-foreground: #f8fafc;
+    --muted: #1e293b;
+    --muted-foreground: #94a3b8;
+    --accent: #2e1065;
+    --accent-foreground: #ddd6fe;
+
+    --destructive: #7f1d1d;
+    --destructive-foreground: #f8fafc;
+    --border: #1e293b;
+    --input: #1e293b;
+    --ring: #8b5cf6;
+  }
+
+  /* 1. Midnight Blue Theme */
+  .theme-midnight {
+    --background: #020617;
+    --foreground: #f8fafc;
+    --card: #0f172a;
+    --card-foreground: #f8fafc;
+    --popover: #0f172a;
+    --popover-foreground: #f8fafc;
+    --primary: #3b82f6;
+    --primary-foreground: #ffffff;
+    --secondary: #1e293b;
+    --secondary-foreground: #f8fafc;
+    --muted: #1e293b;
+    --muted-foreground: #94a3b8;
+    --accent: #1e293b;
+    --accent-foreground: #f8fafc;
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --border: #334155;
+    --input: #1e293b;
+    --ring: #3b82f6;
+  }
+
+  /* 2. Forest Green Theme */
+  .theme-forest {
+    --background: #f8faf6;
+    --foreground: #064e3b;
+    --card: #ffffff;
+    --card-foreground: #022c22;
+    --popover: #ffffff;
+    --popover-foreground: #022c22;
+    --primary: #059669;
+    --primary-foreground: #ffffff;
+    --secondary: #ecfdf5;
+    --secondary-foreground: #047857;
+    --muted: #f0fdf4;
+    --muted-foreground: #059669;
+    --accent: #d1fae5;
+    --accent-foreground: #064e3b;
+    --destructive: #dc2626;
+    --destructive-foreground: #ffffff;
+    --border: #a7f3d0;
+    --input: #ecfdf5;
+    --ring: #059669;
+  }
+
+  /* 3. Sunset Orange Theme */
+  .theme-sunset {
+    --background: #fffcf8;
+    --foreground: #431407;
+    --card: #ffffff;
+    --card-foreground: #431407;
+    --popover: #ffffff;
+    --popover-foreground: #431407;
+    --primary: #ea580c;
+    --primary-foreground: #ffffff;
+    --secondary: #ffedd5;
+    --secondary-foreground: #9a3412;
+    --muted: #fff7ed;
+    --muted-foreground: #c2410c;
+    --accent: #fed7aa;
+    --accent-foreground: #7c2d12;
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --border: #fed7aa;
+    --input: #ffedd5;
+    --ring: #ea580c;
+  }
+
+  /* 4. Rose Gold Theme */
+  .theme-rose {
+    --background: #fffafa;
+    --foreground: #4c0519;
+    --card: #ffffff;
+    --card-foreground: #4c0519;
+    --popover: #ffffff;
+    --popover-foreground: #4c0519;
+    --primary: #e11d48;
+    --primary-foreground: #ffffff;
+    --secondary: #ffe4e6;
+    --secondary-foreground: #be123c;
+    --muted: #fff1f2;
+    --muted-foreground: #fb7185;
+    --accent: #fecdd3;
+    --accent-foreground: #9f1239;
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --border: #fecdd3;
+    --input: #ffe4e6;
+    --ring: #e11d48;
+  }
+
+  /* 5. Cyberpunk Theme */
+  .theme-cyberpunk {
+    --background: #09090b;
+    --foreground: #f472b6;
+    --card: #18181b;
+    --card-foreground: #f0abfc;
+    --popover: #18181b;
+    --popover-foreground: #f0abfc;
+    --primary: #d946ef;
+    --primary-foreground: #000000;
+    --secondary: #27272a;
+    --secondary-foreground: #f0abfc;
+    --muted: #27272a;
+    --muted-foreground: #a1a1aa;
+    --accent: #3b0764;
+    --accent-foreground: #f472b6;
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --border: #3f3f46;
+    --input: #27272a;
+    --ring: #d946ef;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-[var(--background)] text-[var(--foreground)] antialiased;
+    font-family: 'Outfit', sans-serif;
+  }
+
+  /* Custom Scrollbar for Webkit */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--muted-foreground);
+    border-radius: 10px;
+    opacity: 0.5;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+  }
+}
+
+/* Custom Animations & Micro-interactions */
+@layer utilities {
+  .glass-panel {
+    @apply bg-background/60 backdrop-blur-xl border border-border/50;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+  }
+
+  .dark .glass-panel {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300;
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 20px rgba(var(--primary), 0.3);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
